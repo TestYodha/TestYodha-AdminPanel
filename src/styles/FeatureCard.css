@@ -1,0 +1,30 @@
+.feature-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  box-shadow: 0 15px 20px rgba(0,0,0,0.3);
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 40px rgba(0,0,0,0.5);
+  background: var(--hover-bg);
+}
+
+.feature-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+.icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}

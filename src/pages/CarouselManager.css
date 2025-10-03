@@ -1,0 +1,152 @@
+.carousel-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(to right, #4f77ff, #000000 );
+  padding: 250px 20px 60px;  /* ⬅️ 100px top padding added here */
+  color: white;
+  text-align: center;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+}
+
+
+.carousel-wrapper h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #cdc5c5;
+  margin-bottom: 30px;
+}
+
+/* ✅ CARD GRID LIKE DASHBOARD */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: start;
+  position: relative;
+  z-index: 2;
+}
+
+/* ✅ INDIVIDUAL CAROUSEL CARD */
+.carousel-card {
+  background-color: #ffffff;
+  color: #000;
+  padding: 16px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 260px;
+  min-height: 320px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+
+.carousel-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Placeholder for empty card */
+.empty-image {
+  width: 100%;
+  height: 140px;
+  border: 2px dashed #bbb;
+  border-radius: 8px;
+  color: #aaa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.carousel-card input {
+  margin-top: 5px;
+}
+
+.carousel-card button {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.2s;
+}
+
+.carousel-card button:hover {
+  background-color: #0d8be0;
+}
+
+.delete-btn {
+  background-color: #f44336 !important;
+  margin-left: 0;
+  margin-top: 10px;
+}
+
+/* ✅ PLUS (+) CARD STYLE */
+.plus-card {
+  background-color: transparent;
+  border: 2px dashed #ccc;
+  color: #fff;
+  font-size: 36px;
+  font-weight: 800;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  cursor: pointer;
+  padding: 20px;
+  min-height: 320px;
+  border-radius: 12px;
+}
+
+.plus-card:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.plus-card p {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+/* ✅ CLICK FIX FOR WATERMARK/OVERLAYS */
+img.background-overlay,
+canvas,
+.logo-overlay,
+.bg-logo,
+.bg-watermark {
+  pointer-events: none !important;
+  user-select: none !important;
+  z-index: 0 !important;
+}
+
+/* ✅ RESPONSIVE */
+@media (max-width: 1024px) {
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 500px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}

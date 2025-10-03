@@ -1,0 +1,83 @@
+/* ✅ FILE: AssignSubscription.css */
+
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 28px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.container h2 {
+  text-align: center;
+  margin-bottom: 28px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #2f4de0;
+}
+
+.subscription-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.subscription-form label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.subscription-form select,
+.subscription-form input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: #f1f5f9;
+  transition: border-color 0.3s;
+}
+
+.subscription-form select:focus,
+.subscription-form input:focus {
+  border-color: #2f4de0;
+  outline: none;
+  background-color: #fff;
+}
+
+.subscription-form select:disabled {
+  background-color: #e2e8f0;
+  color: #666;
+}
+
+.subscription-form button {
+  background-color: #2f4de0;
+  color: #fff;
+  padding: 14px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.subscription-form button:hover {
+  background-color: #223ac3;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  .container h2 {
+    font-size: 22px;
+  }
+
+  .subscription-form button {
+    font-size: 15px;
+    padding: 12px;
+  }
+}

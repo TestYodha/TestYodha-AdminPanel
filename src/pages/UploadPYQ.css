@@ -1,0 +1,65 @@
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+   padding: 240px 20px 60px;  /* ⬅️ 100px top padding added here */
+  background: #f7f9fc;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 26px;
+  color: #2f4de0;
+}
+
+.pyq-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.pyq-form label {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.pyq-form input,
+.pyq-form select,
+.pyq-form textarea {
+  padding: 10px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 15px;
+  background-color: #fff;
+  transition: border 0.3s ease;
+}
+
+.pyq-form input:focus,
+.pyq-form select:focus,
+.pyq-form textarea:focus {
+  border-color: #2f4de0;
+  outline: none;
+}
+
+.pyq-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.pyq-form button {
+  padding: 12px;
+  background-color: #2f4de0;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pyq-form button:hover {
+  background-color: #1e3ad3;
+}

@@ -1,0 +1,72 @@
+
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: var(--background-color, #fff);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  z-index: 1;
+  position: relative;
+  
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  padding-top: 30px; 
+  color: var(--text-color, #333);
+}
+
+.material-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.material-form label {
+  font-weight: 600;
+  color: var(--text-color, #222);
+}
+
+.material-form input,
+.material-form select,
+.material-form textarea {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  background: #fff;
+  color: #333;
+  z-index: 2;
+  position: relative;
+}
+
+.material-form input:focus,
+.material-form select:focus,
+.material-form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.material-form button {
+  background-color: #2f4de0;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.material-form button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.material-form button:hover:not(:disabled) {
+  background-color: #1e3abf;
+}
