@@ -157,7 +157,7 @@ export default function ManageCoupons() {
         courseId: form.courseId || null,
         planId: form.planId || null,
         active: !!form.active,
-        perUserLimit: form.perUserLimit === "" ? null : Number(form.perUserLimit), // null/0 => unlimited
+        perUserLimit: form.perUserLimit === "" ? null : Number(form.perUserLimit), // null/0 => unlimited time
         maxUses: form.maxUses === "" ? null : Number(form.maxUses),               // null/0 => unlimited
       };
 
