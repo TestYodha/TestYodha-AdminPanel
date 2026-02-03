@@ -236,7 +236,7 @@
 
 
 
-import React, { useState, useEffect } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import {
   collection, getDocs, query, where, deleteDoc, doc
 } from 'firebase/firestore';
@@ -263,7 +263,7 @@ const DeleteCourse = () => {
     setPlans(planSnap.docs.map(d => ({ id: d.id, ...d.data() })));
   };
 
-  const fetchItems = async () => {
+  const fetchItems = useCallback(async () => {
     if (!selectedPlan) return;
 
     let collectionName = '';
@@ -275,7 +275,7 @@ const DeleteCourse = () => {
     const qy = query(collection(db, collectionName), where('planId', '==', selectedPlan));
     const snap = await getDocs(qy);
     setItems(snap.docs.map(d => ({ id: d.id, ...d.data() })));
-  };
+  }, [deleteType, selectedPlan]);
 
   useEffect(() => { fetchCoursesAndPlans(); }, []);
 
@@ -297,7 +297,7 @@ const DeleteCourse = () => {
     if (deleteType === 'pyqs' || deleteType === 'materials' || deleteType === 'testSeries') {
       fetchItems();
     }
-  }, [selectedPlan, deleteType]);
+  }, [deleteType, fetchItems]);
 
   // ---------- Storage Helpers ----------
   const deleteFileByUrl = async (url) => {
