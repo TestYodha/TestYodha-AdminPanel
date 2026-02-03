@@ -14,7 +14,7 @@
 //   const { user, loading } = useAuth();
 //   if (loading) return null;  // Optional: Loading spinner here
 //   return user ? children : <Navigate to="/login" replace />;
-// }
+// t}
 
 // function AppWrapper() {
 //   const location = useLocation();
